@@ -15,7 +15,7 @@ st.title("Clasificación de Roles de Combate 2D Independientes (KNN) ")
 # --- Variables Globales y Definiciones ---
 N_CLUSTERS = 8
 FULL_FEATURE_NAMES = ['hp', 'attack', 'defense', 'special-attack', 'special-defense', 'speed']
-DATA_PATH = r"C:\Users\USUARIO\Downloads\pokemon.csv" 
+DATA_PATH = "pokemon.csv" 
 GLOBAL_COLORS = plt.cm.get_cmap('tab10') 
 K_NEIGHBORS = 5 
 
@@ -560,5 +560,6 @@ with tab_manual:
         else:
             st.error("❌ No se encontró ninguno de los Pokémon ingresados o la lista está vacía. ¡Verifica la ortografía!")
             st.session_state.manual_team = pd.DataFrame()
+
 
     display_team(st.session_state.manual_team, "Manual")
